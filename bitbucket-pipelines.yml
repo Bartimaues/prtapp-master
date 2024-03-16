@@ -1,17 +1,17 @@
-image: maven:3.6.3
-
 pipelines:
   branches:
     main:
       - step:
           name: Build and Test
-          caches:
-            - maven
           script:
+            - pwd
+            - ls -la
             - mvn clean install
       - step:
           name: Deploy to Heroku
           script:
+            - pwd
+            - ls -la
             - pipe: atlassian/heroku-deploy:2.4.0
               variables:
                 HEROKU_API_KEY: $HEROKU_API_KEY
