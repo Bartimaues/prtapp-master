@@ -28,6 +28,8 @@ pipelines:
       - step:
           name: zip file
           script:
+            - apt-get update
+            - apt-get -y install zip
             - zip -r application.zip .
       - step:
           name: Deploy to Heroku
