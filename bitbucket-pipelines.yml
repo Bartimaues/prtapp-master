@@ -17,4 +17,4 @@ pipelines:
                 HEROKU_API_KEY: $HEROKU_API_KEY
                 HEROKU_APP_NAME: "prtappsteve"
                 HEROKU_APP_DIR: 'target'
-                ZIP_FILE: 'target/' # Update this with the path to your jar
+                ZIP_FILE: 'target/springboot-thymeleaf-crud-web-app-0.0.1-SNAPSHOT.jar'
