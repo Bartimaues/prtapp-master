@@ -31,6 +31,7 @@ pipelines:
             - zip -r application.zip .
       - step:
           name: Deploy to Heroku
+          deployment: production
           script:
             - pipe: atlassian/heroku-deploy:1.2.1
               variables:
