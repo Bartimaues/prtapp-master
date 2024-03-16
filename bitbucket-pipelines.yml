@@ -12,7 +12,7 @@ pipelines:
       - step:
           name: Deploy to Heroku
           script:
-            - pipe: atlassian/heroku-deploy:1.2.1
+            - pipe: atlassian/heroku-deploy:2.4.0
               variables:
                 HEROKU_API_KEY: $HEROKU_API_KEY
                 HEROKU_APP_NAME: "prtappsteve"
