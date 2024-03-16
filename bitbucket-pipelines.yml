@@ -25,3 +25,10 @@ pipelines:
             # Run a security scan for sensitive data.
             # See more security tools at https://bitbucket.org/product/features/pipelines/integrations?&category=security
             - pipe: atlassian/git-secrets-scan:0.5.1
+      - step:
+          name: Deploy to Heroku
+          script:
+            - pipe: atlassian/heroku-deploy:1.2.1
+              variables:
+                HEROKU_API_KEY: $HEROKU_API_KEY
+                HEROKU_APP_NAME: 'prtappsteve'
