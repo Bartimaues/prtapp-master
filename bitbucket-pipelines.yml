@@ -7,8 +7,8 @@ pipelines:
           name: Build and Test
           script:
             - pwd
-            - ls -la
             - mvn clean install
+            - ls -la target/
       - step:
           name: Deploy to Heroku
           script:
